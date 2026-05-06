@@ -140,7 +140,7 @@ def transcribe_audio(
         options["fp16"] = args.fp16
 
     cleaned_options = {k: v for k, v in options.items() if v is not None}
-    result = model.transcribe(str(audio_path), **cleaned_options)
+    result = model.transcribe(str(audio_path), verbose=True, **cleaned_options)
 
     return format_output_text(result, single_line=args.single_line, timestamps=args.timestamps)
 
