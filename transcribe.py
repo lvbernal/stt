@@ -28,13 +28,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "input_dir",
         type=Path,
-        default="input/",
         help="Path to the input folder with audio files.",
     )
     parser.add_argument(
         "output_dir",
         type=Path,
-        default="output/",
         help="Path to the output folder where .txt files will be written.",
     )
     parser.add_argument(
